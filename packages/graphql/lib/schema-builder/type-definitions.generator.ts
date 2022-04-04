@@ -27,6 +27,11 @@ export class TypeDefinitionsGenerator {
     this.generateInputTypeDefs(options);
   }
 
+  // NOTE: multiple endpoints를 위해 추가함
+  clearTypeDefinitionStorage() {
+    this.typeDefinitionsStorage.clear();
+  }
+
   private generateInputTypeDefs(options: BuildSchemaOptions) {
     const metadata = TypeMetadataStorage.getInputTypesMetadata();
     const inputTypeDefs = metadata.map((metadata) =>

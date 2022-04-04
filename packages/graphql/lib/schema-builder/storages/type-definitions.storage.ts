@@ -41,6 +41,14 @@ export class TypeDefinitionsStorage {
   private inputTypeDefinitionsLinks?: Map<GqlInputTypeKey, GqlInputType>;
   private outputTypeDefinitionsLinks?: Map<GqlOutputTypeKey, GqlOutputType>;
 
+  clear() {
+    // NOTE: multiple endpoints를 위해 추가함
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore readonly 해제를위해 추가함
+    this.inputTypeDefinitionsLinks = null;
+    this.outputTypeDefinitionsLinks = null;
+  }
+
   addEnums(enumDefs: EnumDefinition[]) {
     enumDefs.forEach((item) =>
       this.enumTypeDefinitions.set(item.enumRef, item),

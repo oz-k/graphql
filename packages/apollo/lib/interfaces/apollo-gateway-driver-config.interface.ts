@@ -4,7 +4,7 @@ import {
   GqlModuleAsyncOptions,
   GqlOptionsFactory,
   GraphQLDriver,
-} from '@nestjs/graphql';
+} from '@a-part/graphql';
 import { ApolloDriverConfig } from './apollo-driver-config.interface';
 
 export interface ApolloGatewayDriverConfig<

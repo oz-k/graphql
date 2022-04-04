@@ -49,7 +49,9 @@ export class GraphQLModule<
   TAdapter extends AbstractGraphQLDriver = AbstractGraphQLDriver,
 > implements OnModuleInit, OnModuleDestroy
 {
-  private static readonly logger = new Logger(GraphQLModule.name, { timestamp: true });
+  private static readonly logger = new Logger(GraphQLModule.name, {
+    timestamp: true,
+  });
 
   get graphQlAdapter(): TAdapter {
     return this._graphQlAdapter as TAdapter;
@@ -160,7 +162,9 @@ export class GraphQLModule<
     });
 
     if (options.path) {
-      GraphQLModule.logger.log(ROUTE_MAPPED_MESSAGE(options.path, RequestMethod.POST));
+      GraphQLModule.logger.log(
+        ROUTE_MAPPED_MESSAGE(options.path, RequestMethod.POST),
+      );
     }
   }
 

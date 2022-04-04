@@ -1,5 +1,5 @@
 {
-  "name": "@nestjs/graphql",
+  "name": "@a-part/graphql",
   "version": "10.0.8",
   "description": "Nest - modern, fast, powerful node.js web framework (@graphql)",
   "author": "Kamil Mysliwiec",

@@ -60,6 +60,8 @@ export class GraphQLSchemaFactory {
     }
 
     TypeMetadataStorage.clear();
+    // NOTE: multiple endpoints를 위해 추가함
+    this.typeDefinitionsGenerator.clearTypeDefinitionStorage();
     LazyMetadataStorage.load(resolvers);
     TypeMetadataStorage.compile(options.orphanedTypes);
 
